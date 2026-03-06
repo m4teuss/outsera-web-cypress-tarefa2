@@ -75,3 +75,9 @@ TAREFA2/
 ### Relatórios de Teste
 - Após a execução dos testes, são gerados arquivos de resultado em:
 - `cypress/cucumber-json`
+
+
+### Obs:
+- Enumerei os arquivos para facilitar a ordem de execução e organização, porém também seria possível identificá-los e utilizá-los apenas pelos nomes.
+
+
