@@ -79,5 +79,6 @@ TAREFA2/
 
 ### Obs:
 - Enumerei os arquivos para facilitar a ordem de execução e organização, porém também seria possível identificá-los e utilizá-los apenas pelos nomes.
+- Criei poucos cenários , porém caso necessario posso incluir mais casos sendo eles negativos e mais positivos.
 
 
