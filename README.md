@@ -30,7 +30,7 @@
 
 
 ### Estrutura de diretórios
-
+```bash
 TAREFA2/
 ├── cypress/
 │   ├── cucumber-json/         
@@ -64,7 +64,7 @@ TAREFA2/
 ├── package.json               
 ├── package-lock.json          
 └── README.md                 
-
+```
 
 ### Padrões Utilizados
 
