@@ -27,9 +27,4 @@ jobs:
       - name: Executar testes Cypress
         run: npx cypress run
 
-      - name: Upload de screenshots e vídeos em caso de falha
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: cypress-artifacts
-          path: cypress/screenshots/
+      
