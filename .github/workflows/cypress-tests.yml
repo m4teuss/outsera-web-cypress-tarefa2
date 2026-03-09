@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Pipe - Desafio de Integração e CI/CD
 
 on:
   push:
