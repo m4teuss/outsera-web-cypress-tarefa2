@@ -30,15 +30,15 @@ export class ElementsCheckout {
   };
 
   fieldName = () => {
-    return ":nth-child(2) > .form-control";
+    return 'input[placeholder="Ex. John"]';
   };
 
   fieldLastName = () => {
-    return ":nth-child(3) > .form-control";
+    return 'input[placeholder="Ex. Doe"]';
   };
 
   fieldCode = () => {
-    return ":nth-child(4) > .form-control";
+    return 'input[type="text"][value="1207"]';
   };
 
   btnContinue = () => {

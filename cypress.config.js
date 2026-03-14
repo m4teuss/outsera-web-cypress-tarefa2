@@ -1,20 +1,32 @@
-const { defineConfig } = require('cypress');
-const cucumber = require('cypress-cucumber-preprocessor').default;
+const { defineConfig } = require("cypress");
+const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
+const {
+  addCucumberPreprocessorPlugin,
+} = require("@badeball/cypress-cucumber-preprocessor");
+
+const {
+  createEsbuildPlugin,
+} = require("@badeball/cypress-cucumber-preprocessor/esbuild");
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://practice.qabrains.com/ecommerce/login', // URL base projeto
-    specPattern: '**/*.feature', // Padrão para encontrar arquivos .feature
-    viewportWidth: 1920, // Largura da tela em pixels
-    viewportHeight: 1080, // Altura da tela em pixels
-    supportFile: false, // Desabilita o arquivo de suporte padrão (opcional)
-    setupNodeEvents(on, config) {
-      // Configura o preprocessador do Cucumber
-      on('file:preprocessor', cucumber());
+    baseUrl: "https://practice.qabrains.com/ecommerce/login",
+    specPattern: "cypress/e2e/**/*.feature",
+    viewportWidth: 1920,
+    viewportHeight: 1080,
+    supportFile: false,
 
-      // Retorne a configuração para que o Cypress a use
+    async setupNodeEvents(on, config) {
+      await addCucumberPreprocessorPlugin(on, config);
+
+      on(
+        "file:preprocessor",
+        createBundler({
+          plugins: [createEsbuildPlugin(config)],
+        }),
+      );
+
       return config;
     },
   },
 });
-

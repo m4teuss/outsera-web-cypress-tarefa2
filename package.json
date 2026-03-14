@@ -10,15 +10,21 @@
         "cy:open:dev": "cypress open"
     },
     "cypress-cucumber-preprocessor": {
-        "cucumberJson": {
-            "generate": true
-        },
-        "step_definitions": "cypress/support/steps"
+        "step_definitions": "cypress/support/step_definitions",
+        "json": {
+            "enabled": true,
+            "output": "cypress/reports/cucumber-report.json"
+        }
     },
     "devDependencies": {
+        "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
+        "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+        "@cypress/browserify-preprocessor": "^3.0.2",
         "cypress": "^14.0.2",
         "cypress-cucumber-preprocessor": "^4.3.1",
-        "cypress-xpath": "^1.6.2",
-        "multiple-cucumber-html-reporter": "^1.18.0"
+        "cypress-xpath": "^1.6.2"
+    },
+    "dependencies": {
+        "cypress-esbuild-preprocessor": "^1.0.2"
     }
 }

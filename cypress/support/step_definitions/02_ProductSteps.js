@@ -1,14 +1,19 @@
+import {
+  defineStep as And,
+  Given,
+  When,
+  Then,
+} from "@badeball/cypress-cucumber-preprocessor";
+
 import LoginPage from "../pages/01_LoginPage";
 const loginPage = new LoginPage();
 
 import ProductPage from "../pages/02_ProductPage";
 const productPage = new ProductPage();
 
-
 Given("que estou na página de produtos", () => {
   loginPage.openWebSite();
   loginPage.login("test@qabrains.com", "Password123");
-  cy.wait(3000); // espera 3 segundos
 });
 
 When("seleciono produto {}", (nomeProduto) => {

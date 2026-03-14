@@ -10,13 +10,13 @@ Feature: Compra de produto
 
         When prossigo para o checkout
         And preencho os dados do cliente com nome <nome>, sobrenome <sobrenome> e cep <cep>
-        Then devo visualizar o valor total da compra
-        And devo visualizar o valor da taxa de entrega
+        Then devo visualizar o valor total da compra <valorCompra>
+        And devo visualizar o valor da taxa de entrega <valorTaxaEntrega>
 
         When finalizo a compra
         Then devo visualizar a mensagem <mensagem> de compra realizada com sucesso
 
         Examples:
-            | nomeProduto       | nome | sobrenome | cep       | mensagem                  |
-            | Sample Shirt Name | João | Silva     | 13000-000 | Thank you for your order! |
+            | nomeProduto       | nome | sobrenome | cep       | mensagem                  | valorCompra | valorTaxaEntrega |
+            | Sample Shirt Name | João | Silva     | 13000-000 | Thank you for your order! | $49.99      | $2.50            |
 

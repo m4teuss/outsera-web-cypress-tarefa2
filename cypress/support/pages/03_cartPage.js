@@ -13,7 +13,9 @@ class CartPage {
   }
 
   checkProductQuantity(qtdProduct) {
-    cy.contains("span", qtdProduct).should("have.text", "1");
+    cy.contains("span", qtdProduct)
+      .should("be.visible")
+      .and("have.text", qtdProduct);
   }
 }
 export default CartPage;

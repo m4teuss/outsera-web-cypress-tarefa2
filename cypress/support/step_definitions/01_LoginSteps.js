@@ -1,3 +1,10 @@
+import {
+  defineStep as And,
+  Given,
+  When,
+  Then,
+} from "@badeball/cypress-cucumber-preprocessor";
+
 import LoginPage from "../pages/01_LoginPage";
 const loginPage = new LoginPage();
 
