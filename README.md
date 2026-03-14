@@ -31,39 +31,33 @@
 
 ### Estrutura de diretórios
 ```bash
-TAREFA2/
+OUTSERA-WEB-CYPRESS-TAREFA2
+├── .github/workflows/
+│   └── cypress-tests.yml
 ├── cypress/
-│   ├── cucumber-json/         
-│   ├── fixtures/             
-│   ├── integration/
-│   │   └── gui/               
-│   │       ├── 01_login.feature
-│   │       ├── 02_product.feature
-│   │       ├── 03_cart.feature
-│   │       └── 04_checkout.feature
-│   ├── plugins/
-│   │   └── index.js           
-│   ├── screenshots/          
+│   ├── e2e/gui/
+│   │   ├── 01_login.feature
+│   │   ├── 02_product.feature
+│   │   ├── 03_cart.feature
+│   │   └── 04_checkout.feature
+│   ├── reports/
+│   │   └── cucumber-report.json
 │   └── support/
-│       ├── elements/          
+│       ├── elements/
 │       │   └── Elements.js
-│       ├── pages/             
+│       ├── pages/
 │       │   ├── 01_LoginPage.js
 │       │   ├── 02_ProductPage.js
 │       │   ├── 03_cartPage.js
 │       │   └── 04_checkoutPage.js
-│       ├── steps/             
-│       │   ├── 01_LoginSteps.js
-│       │   ├── 02_ProductSteps.js
-│       │   ├── 03_cartStep.js
-│       │   └── 04_checkoutStep.js
-│       ├── commands.js        
-│       └── index.js           
-├── report.js                  
-├── cypress.config.js          
-├── package.json               
-├── package-lock.json          
-└── README.md                 
+│       └── step_definitions/
+│           ├── 01_LoginSteps.js
+│           ├── 02_ProductSteps.js
+│           ├── 03_cartStep.js
+│           └── 04_checkoutStep.js
+├── cypress.config.js
+├── package.json
+└── README.md
 ```
 
 ### Padrões Utilizados
